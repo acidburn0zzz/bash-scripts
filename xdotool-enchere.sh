@@ -7,7 +7,8 @@
 # Pour capturer les coordonnées des boutons, placer la souris dessus
 # et exécuter la commande xdotool getmouselocation
 
-# Avec Chromium sur écran 1920x1080 en haut de page
+# Avec chromium sur écran 1920x1080, KDE5 breeze barre en haut
+# et Scroll 1 fois
 console=$(xdotool getactivewindow)
 enchere=$1
 
@@ -43,16 +44,16 @@ do
                 "m")
                         # On deplace la souris sur le bouton métal
                         echo Enchere Métal
-                        xdotool mousemove 1250 752
+                        xdotool mousemove 1250 715
                         ;;
                 "c")
                         # On deplace la souris sur le bouton cristal
                         echo Enchere Cristal
-                        xdotool mousemove 1250 810
+                        xdotool mousemove 1250 775
                         ;;
                 "d")
                         echo Enchere Deutérium
-                        xdotool mousemove 1250 870
+                        xdotool mousemove 1250 830
                         ;;
                 *)
                         echo Echec de l enchère
@@ -66,7 +67,7 @@ do
                 xdotool click 1
 
                 # On déplace la souris sur Faire une enchère
-                xdotool mousemove 1183 1045
+                xdotool mousemove 1183 1010
 
                 # on clique
                 xdotool click 1
